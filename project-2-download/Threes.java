@@ -1,0 +1,22 @@
+//CS110A
+//Carson J. King
+//The Threes class simulates the category for Threes on a Yahtzee scoring sheet.
+
+public class Threes extends Category
+{
+
+   /**
+      The evaluate() Method evaluates the Dice object it is sent. In this case it sums up the score
+      for Die objects with value 3 rolled.
+      @param d The Dice object/Die objects rolled.
+      @return The score for the category.
+   */
+   
+   public int evaluate(Dice d)
+   {
+      //The variable THREE represents the points given per Die object with 3 as it's value rolled.
+      final int THREE = 3;
+      //Returns the total value earned in the category using THREE and the count of Die objects with value 3.
+      return THREE * d.count(3);
+   }
+}
